@@ -7,10 +7,7 @@ public class Main{
         int result = 1;
 
         // 3번 반복하여 각 숫자 곱하기
-        for (int i = 0; i < 3; i++) {
-            int num = Integer.parseInt(br.readLine());
-            result *= num;
-        }
+        result = Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine());
 
         String numStr = Integer.toString(result);
 
