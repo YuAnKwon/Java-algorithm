@@ -1,37 +1,32 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // 8개의 숫자를 배열로 입력받음
-        int[] notes = new int[8];
-        for (int i = 0; i < 8; i++) {
-            notes[i] = scanner.nextInt();
+public class Main{
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+
+        int intArray[] = new int[8];
+        int tokenlength = st.countTokens();
+
+        // 배열에 숫자 넣기
+        for(int i=0; i<tokenlength; i++){
+            intArray[i] = Integer.parseInt(st.nextToken());
         }
-        
-        // ascending인지 확인
-        boolean ascending = true;
-        boolean descending = true;
-        
-        for (int i = 0; i < 7; i++) {
-            if (notes[i] != notes[i + 1] - 1) {
-                ascending = false;
+
+        String result = "";
+
+        //오름차순인지 내림차순인지 판단
+        for(int i=0; i<intArray.length-1; i++){
+            if(intArray[i] + 1 == intArray[i+1]){
+                result = "ascending";
+            } else if(intArray[i] - 1 == intArray[i+1]){
+                result = "descending";
+            } else{
+                result = "mixed";
+                break;
             }
-            if (notes[i] != notes[i + 1] + 1) {
-                descending = false;
-            }
         }
-        
-        // 결과 출력
-        if (ascending) {
-            System.out.println("ascending");
-        } else if (descending) {
-            System.out.println("descending");
-        } else {
-            System.out.println("mixed");
-        }
-        
-        scanner.close();
+        System.out.print(result);
     }
 }
