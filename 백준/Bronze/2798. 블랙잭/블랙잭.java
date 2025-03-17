@@ -20,9 +20,7 @@ public class Main{
              array[i] = Integer.parseInt(st.nextToken());
         }
 
-        // 3개의 숫자를 더한 결과를 저장할 리스트
-        ArrayList<Integer> sum = new ArrayList<>();
-        int index = 0;
+        int max = 0;
 
         // 첫번째 숫자
         for (int i = 0; i < N-2; i++) {
@@ -30,17 +28,12 @@ public class Main{
             for (int j = i+1; j < N-1; j++) {
                 // 세번째 숫자
                 for (int k = j+1; k < N; k++) {
-                    sum.add(array[i] + array[j] + array[k]);
+                    int result = array[i] + array[j] + array[k];
+                    if(result <= M && result > max ){
+                        max = result;
+                    }
                 }
             }
-        }
-
-        // M보다 같거나 작은 수 중 가장 큰 수
-        Collections.sort(sum);
-        int max = -1;
-        for(int value : sum) {
-            if (value > M) break;
-            max = value;
         }
         System.out.println(max);
     }
