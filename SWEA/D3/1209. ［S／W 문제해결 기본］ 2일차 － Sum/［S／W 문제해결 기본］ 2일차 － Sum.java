@@ -1,13 +1,11 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class Solution{
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // #1(br.readLine) 100개(br.readLine) 100개 100개 ~~~ 이렇게 되는거.
         // 테스트 케이스 10번
         for (int i = 1; i <= 10; i++) {
             int T = Integer.parseInt(br.readLine()); // 테스트 케이스
@@ -21,10 +19,13 @@ public class Solution{
                 }
             }
 
-            // 다 만들엇으면 각 행과 열 대각선의 값들 중 최댓값 구하기. 각 값들을 넣는 배열도 하나 만들기
+            // 합 배열
             int[] rowSumArr = new int[100];
             int[] colSumArr = new int[100];
             int[] diaSumArr = new int[2];
+
+            // 최댓값 초기화
+            int max = 0;
 
             // 각 행,열,대각선 합 구해서 배열에 넣기
             for (int j = 0; j < 100; j++) {
@@ -39,18 +40,22 @@ public class Solution{
                 rowSumArr[j] = rowSum;
                 colSumArr[j] = colSum;
 
+                if(rowSum > max) max = rowSum;
+                if(colSum > max) max = colSum;
+
                 // 대각선 합 구하기
                 diaSumArr[0] += arr[j][j];
                 diaSumArr[1] += arr[j][99-j];
             }
 
             // 최댓값 구하기
-            int rowMax = Arrays.stream(rowSumArr).max().getAsInt();
-            int colMax = Arrays.stream(colSumArr).max().getAsInt();
-            int diaMax = Arrays.stream(diaSumArr).max().getAsInt();
+            if(diaSumArr[0] > max ) max = diaSumArr[0];
+            if(diaSumArr[1] > max ) max = diaSumArr[1];
 
-            int max = Math.max(diaMax, Math.max(rowMax, colMax));
-            System.out.printf("#%d %d\n", i, max);
+            bw.write("#" + T + " " + max + "\n");
         }
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
