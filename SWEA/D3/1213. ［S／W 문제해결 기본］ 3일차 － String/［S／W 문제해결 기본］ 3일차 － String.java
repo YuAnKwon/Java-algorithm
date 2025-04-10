@@ -15,8 +15,8 @@ public class Solution{
             int count = 0; // 문자열 횟수
             while(strings.contains(str)){
                 // 몇번반복되는지 출력이니까. 해당 문자열이 나오면 count올리고 자르고 올리고 자르고 하면 될듯.
-                int firstIndex = strings.indexOf(str);
-                int lastIndex = firstIndex + str.length();
+                int firstIndex = strings.indexOf(str); // 첫번째로 나오는 글자 index
+                int lastIndex = firstIndex + str.length(); // 글자 마지막 index
                 strings = strings.substring(lastIndex);
                 count++;
             }
