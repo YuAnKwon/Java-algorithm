@@ -14,9 +14,7 @@ public class Solution{
             // 글자판 배열 생성
             for (int j = 0; j < 8; j++) {
                 String strings = br.readLine();
-                for (int k = 0; k < 8; k++) {
-                    arr[j][k] = strings.charAt(k);
-                }
+                arr[j] = strings.toCharArray();
             }
 
             int count = 0; // 회문의 개수
@@ -35,7 +33,6 @@ public class Solution{
                 }
             }
 
-            bw.flush();
             bw.write("#"+ i + " " + count + "\n");
         }
         bw.close();
