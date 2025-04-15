@@ -7,7 +7,7 @@ public class Solution{
 
         // 테스트 케이스 10번
         for (int i = 1; i <=10 ; i++) {
-            int T = Integer.parseInt(br.readLine()); // 테스트 케이스
+            int T = Integer.parseInt(br.readLine()); 
             char[][] arr = new char[100][100];
 
             // 글자판 배열 생성
@@ -38,7 +38,7 @@ public class Solution{
                 }
             }
 
-            bw.write("#"+ T + " " + max + "\n");
+            bw.write("#"+ T + " " + max + "\n"); //i 말고 T로 해야 오류가 안나는 이슈 발생
         }
         bw.close();
         br.close();
