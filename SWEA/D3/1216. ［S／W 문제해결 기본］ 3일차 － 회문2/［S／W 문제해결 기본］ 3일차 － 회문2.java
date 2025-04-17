@@ -37,8 +37,8 @@ public class Solution{
                     }
                 }
             }
-
-            bw.write("#"+ T + " " + max + "\n"); //i 말고 T로 해야 오류가 안나는 이슈 발생
+//i 말고 T로 해야 오류가 안나는 이슈 발생
+            bw.write("#"+ T + " " + max + "\n"); 
         }
         bw.close();
         br.close();
