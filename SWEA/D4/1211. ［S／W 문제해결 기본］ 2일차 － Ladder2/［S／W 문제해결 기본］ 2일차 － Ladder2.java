@@ -11,7 +11,7 @@ public class Solution{
             // 테스트 케이스 T
             int T = Integer.parseInt(br.readLine());
 
-            int[][] ladder = new int[100][100];
+            int[][] ladder = new int[100][100]; // 100x100
 
             // 100x100 배열 생성
             for (int j = 0; j < 100; j++) {
