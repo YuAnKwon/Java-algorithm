@@ -9,7 +9,7 @@ public class Main{
         int num = Integer.parseInt(bf.readLine());
 
         int level = 1; // 층 수
-        int current = 1;
+        int current = 1; // 현재
 
         while(current < num){
             current += level * 6;
