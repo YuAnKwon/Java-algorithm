@@ -10,7 +10,7 @@ public class Main{
         // 첫째 줄 입력
         StringTokenizer st = new StringTokenizer(bf.readLine());
         int N = Integer.parseInt(st.nextToken()); // N장의 카드 중 3개 선택
-        int M = Integer.parseInt(st.nextToken()); // 3개의 숫자 합이 M을 넘지않아야한다.
+        int M = Integer.parseInt(st.nextToken()); // 3개의 숫자 합이 M을 넘지않아야함.
 
         // 둘째 줄 입력
         st = new StringTokenizer(bf.readLine());
