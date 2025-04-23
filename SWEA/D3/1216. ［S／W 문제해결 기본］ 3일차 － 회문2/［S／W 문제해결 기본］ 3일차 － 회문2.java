@@ -8,7 +8,7 @@ public class Solution{
         // 테스트 케이스 10번
         for (int i = 1; i <=10 ; i++) {
             int T = Integer.parseInt(br.readLine()); 
-            char[][] arr = new char[100][100];
+            char[][] arr = new char[100][100]; // 100x100
 
             // 글자판 배열 생성
             for (int j = 0; j < 100; j++) {
