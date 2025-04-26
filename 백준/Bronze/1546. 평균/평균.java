@@ -25,7 +25,7 @@ public class Main{
 
         double average = sum / N;
 
-        bw.write(average+"\n");
+        bw.write(average+"\n"); // 평균 구하기
 
         bw.close();
         br.close();
