@@ -20,7 +20,7 @@ public class Main{
 
         double sum = 0;
         for (int i = 0; i < N; i++) {
-            sum += (double) arr[i] / M * 100;
+            sum += (double) arr[i] / M * 100; // 평균
         }
 
         double average = sum / N;
