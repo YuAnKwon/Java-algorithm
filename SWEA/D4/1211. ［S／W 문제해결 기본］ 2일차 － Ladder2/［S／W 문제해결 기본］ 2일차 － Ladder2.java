@@ -37,7 +37,7 @@ public class Solution{
             }
             bw.write("#" + i + " " + minCol + "\n");
         }
-        bw.flush();
+        bw.flush(); // 굳이 안해도됨
         bw.close();
         br.close();
     }
