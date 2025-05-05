@@ -8,7 +8,7 @@ public class Solution{
 
         // 테스트 케이스 10번
         for (int i = 1; i <= 10; i++) {
-            // 테스트 케이스 T
+            // 테스트 케이스
             int T = Integer.parseInt(br.readLine());
 
             int[][] ladder = new int[100][100]; // 100x100
