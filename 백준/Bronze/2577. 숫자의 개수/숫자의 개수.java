@@ -14,7 +14,7 @@ public class Main{
         int array[] = new int[10];
 
         for(char c : numStr.toCharArray()){
-            array[c-'0'] += 1;
+            array[c-'0'] += 1; // ascii
         }
 
         for (int i : array){
