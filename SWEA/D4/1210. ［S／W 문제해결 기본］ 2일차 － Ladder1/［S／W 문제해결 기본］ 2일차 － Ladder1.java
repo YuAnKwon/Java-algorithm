@@ -6,7 +6,7 @@ public class Solution{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // 테스트 케이스 10번
+        // 테스트 케이스 
         for (int i = 1; i <= 10; i++) {
             // 테스트 케이스 T
             int T = Integer.parseInt(br.readLine());
